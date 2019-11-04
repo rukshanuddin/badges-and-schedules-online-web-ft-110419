@@ -7,3 +7,9 @@ def batch_badge_creator(attendees)
   attendees.each {|name| badges << badge_maker(name)}
   return badges
 end
+
+def assign_rooms(attendees)
+  rooms = []
+  attendees.each_with_index {|name, idx| rooms << "Hello, #{name}! You'll be assigned to room #{idx}!"}
+  return rooms
+end
